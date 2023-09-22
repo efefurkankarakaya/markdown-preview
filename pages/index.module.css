@@ -1,0 +1,23 @@
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.innerContainer {
+}
+
+.padding {
+  padding: 10px
+}
+
+.textArea {
+  width: 40vw;
+  height: 60vh;
+}
+
+.outputArea {
+  width: 40vw;
+  height: 60vh;
+  border: 1px solid black;
+}
