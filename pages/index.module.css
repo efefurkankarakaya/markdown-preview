@@ -26,6 +26,7 @@
 .outputArea {
   width: 40vw;
   height: 60vh;
+  overflow: scroll;
 }
 
 .border {
