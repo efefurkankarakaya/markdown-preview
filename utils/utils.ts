@@ -11,7 +11,11 @@ export async function convertMarkdownToHTML(content: string): Promise<string> {
   };
 
   // const processedContent = await unified().use(remarkParse).use(remarkRehype).use(rehypeSanitize).use(rehypeStringify).process(content);
-  const processedContent = await unified().use(remarkParse).use(remarkHtml, remarkHtmlConfig).process(content);
+  const processedContent = await unified()
+    .use(remarkParse)
+    /* @ts-ignore */
+    .use(remarkHtml, remarkHtmlConfig)
+    .process(content);
   const contentHTML = processedContent.toString();
   return contentHTML;
 }

@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
  * Dockerfile
  * Tests (with Cypress, e2e and unit)
  * Workflow (run tests every commit)
- * Save / download
+ * Save / download or Copy
  * Set data to the cookies
  */
 export default function Home() {
