@@ -8,7 +8,7 @@ interface FixedTextAreaProps {
 }
 
 const FixedTextArea: React.FC<FixedTextAreaProps> = (props): JSX.Element => {
-  const { extraClassName, textAreaProps } = props;
+  const { extraClassName = "", textAreaProps } = props;
   const combinedClasses = combineClasses(Style.textArea, extraClassName);
 
   return <textarea className={combinedClasses} {...textAreaProps} />;

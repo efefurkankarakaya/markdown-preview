@@ -9,6 +9,10 @@ import { combineClasses, convertMarkdownToHTML } from "@/utils/utils";
 const inter = Inter({ subsets: ["latin"] });
 
 /**
+ * TODO:
+ * Dockerfile
+ * Tests (with Cypress, e2e and unit)
+ * Workflow (run tests every commit)
  * Save / download
  * Set data to the cookies
  */
@@ -29,13 +33,17 @@ export default function Home() {
     <div className={Style.container}>
       <div className={Style.innerContainer}>
         <FixedTextArea
-          extraClassName={combineClasses(Style.outputArea, Style.padding)}
+          extraClassName={combineClasses(Style.outputArea, Style.padding, Style.margin, Style.border)}
           textAreaProps={{
             onChange: onChangeMarkdownValue,
             value: markdownValue,
+            // rows: 20,
           }}
         />
-        <div className={combineClasses(Style.outputArea, Style.padding)} dangerouslySetInnerHTML={{ __html: htmlValue }} />
+        <div
+          className={combineClasses(Style.outputArea, Style.padding, Style.margin, Style.border)}
+          dangerouslySetInnerHTML={{ __html: htmlValue }}
+        />
       </div>
     </div>
   );
