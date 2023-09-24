@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`If home page is rendered unchanged 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="innerContainer"
+    >
+      <textarea
+        class="textArea outputArea padding margin border"
+      />
+      <div
+        class="outputArea padding margin border"
+      />
+    </div>
+  </div>
+</div>
+`;
