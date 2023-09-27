@@ -1,0 +1,23 @@
+# Add 'repo' label to any root file changes
+repo:
+  - "*"
+
+# Add 'test' label to any change to *.spec.js files within the source dir
+test:
+  - __tests__/**/*.spec.js
+
+components:
+  - any: ["components/**"]
+
+pages:
+  - any: ["pages/**"]
+
+public:
+  - any: ["public/**"]
+
+workflow:
+  - any: [".github/workflows/**"]
+
+# Add 'frontend` label to any change to *.js files as long as the `main.js` hasn't changed
+docker:
+  - any: ["Dockerfile", ".dockerignore"]
