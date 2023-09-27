@@ -1,8 +1,5 @@
-import rehypeSanitize from "rehype-sanitize";
-import rehypeStringify from "rehype-stringify";
 import remarkHtml, { type Options } from "remark-html";
 import remarkParse from "remark-parse";
-import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 
 export async function convertMarkdownToHTML(content: string): Promise<string> {
@@ -20,7 +17,7 @@ export async function convertMarkdownToHTML(content: string): Promise<string> {
   return contentHTML;
 }
 
-export function combineClasses(initial: string, ...upcoming: string[]) {
+export function combineClasses(initial: string, ...upcoming: string[]): string {
   if (!initial) {
     throw new Error("Initial can't be falsy.");
   }
