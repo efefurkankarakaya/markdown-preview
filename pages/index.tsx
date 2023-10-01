@@ -20,7 +20,7 @@ export default function Home() {
     <div className={Style.container}>
       <div className={Style.innerContainer}>
         <FixedTextArea
-          extraClassName={combineClasses(Style.outputArea, Style.padding, Style.margin, Style.border)}
+          extraClassName={combineClasses(Style.textArea, Style.padding, Style.margin, Style.border)}
           textAreaProps={{
             onChange: onChangeMarkdownValue,
             value: markdownValue,
