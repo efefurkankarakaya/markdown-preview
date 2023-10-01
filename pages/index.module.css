@@ -6,7 +6,7 @@
 
 .innerContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: --flexDirection;
   justify-content: space-between;
 }
 
@@ -20,12 +20,13 @@
 
 .textArea {
   width: 40vw;
-  height: 60vh;
+  height: var(--textAreaHeight);
 }
 
 .outputArea {
   width: 40vw;
-  height: 60vh;
+  padding: 20px;
+  height: var(--textAreaHeight);
   overflow: scroll;
 }
 
