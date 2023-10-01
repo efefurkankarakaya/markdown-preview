@@ -9,7 +9,7 @@ exports[`If home page is rendered unchanged 1`] = `
       class="innerContainer"
     >
       <textarea
-        class="textArea outputArea padding margin border"
+        class="textArea textArea padding margin border"
       >
         # Markdown: A Simple Markup Language
 
