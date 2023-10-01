@@ -30,6 +30,7 @@ export default function Home() {
         <div
           className={combineClasses(Style.outputArea, Style.padding, Style.margin, Style.border)}
           dangerouslySetInnerHTML={{ __html: htmlValue }}
+          id="outputField"
         />
       </div>
     </div>
