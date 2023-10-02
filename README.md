@@ -4,10 +4,10 @@ A live Markdown Preview app built on Next.js
 
 ## Technologies
 - [Next.js](https://nextjs.org/)
-- [Remark](https://github.com/remarkjs/remark) - to process `Markdown`` files
+- [Remark](https://github.com/remarkjs/remark) - to process `Markdown` files
 - [Rehype](https://github.com/rehypejs/rehype) - to process `HTML` files
-- [Jest](https://jestjs.io/) - for `snapshot` and `unit testing``
-- [Github Actions](https://docs.github.com/en/actions) - to manage `CI``
+- [Jest](https://jestjs.io/) - for `snapshot` and `unit testing`
+- [Github Actions](https://docs.github.com/en/actions) - to manage `CI`
 - [Husky](https://typicode.github.io/husky/getting-started.html) - to manage `Git Hooks`
 
 ## Running
