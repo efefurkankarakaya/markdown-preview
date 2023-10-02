@@ -6,8 +6,8 @@ A live Markdown Preview app built on Next.js
 - [Next.js](https://nextjs.org/)
 - [Remark](https://github.com/remarkjs/remark) - to process `Markdown` files
 - [Rehype](https://github.com/rehypejs/rehype) - to process `HTML` files
-- [Jest](https://jestjs.io/) - for `snapshot` and `unit testing`
-- [Github Actions](https://docs.github.com/en/actions) - to manage `CI`
+- [Jest](https://jestjs.io/) - for `Snapshot Testing` and `Unit Testing`
+- [Github Actions](https://docs.github.com/en/actions) - to manage `CI & CD`
 - [Husky](https://typicode.github.io/husky/getting-started.html) - to manage `Git Hooks`
 
 ## Running
@@ -20,10 +20,10 @@ Step 2: Change directory to the project folder. <br />
 
 ### Docker
 
-Step 3: Build a docker image <br />
+Step 3: Create a docker image <br />
 `$ docker build -t markdown-preview` <br />
 
-Step 4: Run the docker image <br />
+Step 4: Run the docker image in a container <br />
 `$ docker run -p 3000:3000 markdown-preview`
 
 ### pnpm
