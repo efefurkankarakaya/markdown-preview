@@ -1,5 +1,6 @@
 :root {
   --textAreaHeight: 90vh;
+  --lineColor: lightgrey;
   /* --flexDirection: row; */
 }
 
@@ -46,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid var(--lineColor);
   font-weight: 500;
   margin-top: 5px;
   padding-bottom: 6.5px;
@@ -68,6 +69,24 @@ h4,
 h5,
 h6 :after {
   margin-bottom: 16px;
+}
+
+ul,
+ol {
+  padding-left: 2em;
+}
+
+li {
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--lineColor);
+  margin: 1em 0;
 }
 
 pre {
