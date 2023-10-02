@@ -7,6 +7,7 @@ test("If home page is rendered unchanged", async () => {
 
   await waitFor(
     () => {
+      /* eslint-disable-next-line */
       const outputField = container.querySelector("#outputField");
       const isWelcomeTextSet = outputField?.hasChildNodes();
       expect(isWelcomeTextSet).toBe(true);
