@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+
+# Next-related things
+.next
+next-env-.d.ts
+
+# Tests
+__snapshots__/
+
+# GH Actions
+.github/
+
+# Documents
+*.md

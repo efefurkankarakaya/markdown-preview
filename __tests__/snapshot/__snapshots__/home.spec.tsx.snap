@@ -5,9 +5,15 @@ exports[`If home page is rendered unchanged 1`] = `
   <div
     class="container"
   >
+    
+
+      
     <div
       class="innerContainer"
     >
+      
+
+        
       <textarea
         class="textArea textArea padding margin border"
       >
@@ -79,6 +85,9 @@ You can create horizontal rules with three or more hyphens, asterisks, or unders
 ---
 
       </textarea>
+      
+
+        
       <div
         class="outputArea padding margin border"
         id="outputField"
@@ -326,7 +335,13 @@ You can create horizontal rules with three or more hyphens, asterisks, or unders
         
 
       </div>
+      
+
+      
     </div>
+    
+
+    
   </div>
 </div>
 `;

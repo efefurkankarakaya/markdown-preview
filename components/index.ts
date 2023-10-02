@@ -1,1 +1,1 @@
-export { default as FixedTextArea } from "./FixedTextArea";
+export { default as FixedTextArea } from "./FixedTextArea";
