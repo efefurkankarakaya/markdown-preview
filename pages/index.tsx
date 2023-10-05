@@ -143,6 +143,7 @@ export default function Home() {
               Style.border
             )}
             textAreaProps={{
+              // @ts-ignore
               ref: fixedTextAreaRef,
               onChange: onChangeMarkdownValue,
               value: markdownValue
