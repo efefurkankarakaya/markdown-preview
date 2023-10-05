@@ -1,12 +1,13 @@
 {
   "name": "markdown-preview",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "checkTypes": "tsc --noemit",
+    "lint": "next lint && pnpm checkTypes",
     "prettify": "prettier --write .",
     "test": "jest",
     "test:watch": "jest --watch",
