@@ -8,10 +8,47 @@ exports[`If home page is rendered unchanged 1`] = `
     <div
       class="innerContainer"
     >
-      <textarea
-        class="textArea textArea padding margin border"
+      <div
+        class="formatIcons"
       >
-        # Markdown: A Simple Markup Language
+        <button
+          class="button"
+        >
+          <img
+            alt="bold"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="40"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </button>
+        <button
+          class="button"
+        >
+          <img
+            alt="bold"
+            data-nimg="1"
+            decoding="async"
+            fetchpriority="high"
+            height="40"
+            src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+            srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </button>
+      </div>
+      <div
+        class="editorContainer"
+      >
+        <textarea
+          class="textArea textArea padding margin border"
+        >
+          # Markdown: A Simple Markup Language
 
 Markdown is a lightweight markup language that allows you to format plain text documents using a simple and easy-to-read syntax. It was created by John Gruber and Aaron Swartz in 2004 with the goal of making it simple to write structured documents that can be easily converted to HTML.
 
@@ -78,253 +115,254 @@ You can create horizontal rules with three or more hyphens, asterisks, or unders
 
 ---
 
-      </textarea>
-      <div
-        class="outputArea padding margin border"
-        id="outputField"
-      >
-        <h1>
-          Markdown: A Simple Markup Language
-        </h1>
-        
-
-        <p>
-          Markdown is a lightweight markup language that allows you to format plain text documents using a simple and easy-to-read syntax. It was created by John Gruber and Aaron Swartz in 2004 with the goal of making it simple to write structured documents that can be easily converted to HTML.
-        </p>
-        
-
-        <h2>
-          Headers
-        </h2>
-        
-
-        <p>
-          You can create headers by using hashtags (
-          <code>
-            #
-          </code>
-          ). The number of hashtags indicates the header level:
-        </p>
-        
-
-        <h2>
-          Emphasis
-        </h2>
-        
-
-        <p>
-          You can emphasize text by using asterisks (
-          <code>
-            *
-          </code>
-          ) or underscores (
-          <code>
-            _
-          </code>
-          ):
-        </p>
-        
-
-        <ul>
-          
-
-          <li>
-            <em>
-              Italic text
-            </em>
-             can be created using 
-            <code>
-              *
-            </code>
-             or 
-            <code>
-              _
-            </code>
-            .
-          </li>
-          
-
-          <li>
-            <strong>
-              Bold text
-            </strong>
-             can be created using 
-            <code>
-              **
-            </code>
-             or 
-            <code>
-              __
-            </code>
-            .
-          </li>
-          
-
-        </ul>
-        
-
-        <h2>
-          Lists
-        </h2>
-        
-
-        <p>
-          Markdown supports both ordered and unordered lists:
-        </p>
-        
-
-        <h3>
-          Unordered Lists
-        </h3>
-        
-
-        <ul>
-          
-
-          <li>
-            Item 1
-          </li>
-          
-
-          <li>
-            Item 2
-          </li>
-          
-
-          <li>
-            Item 3
-          </li>
-          
-
-        </ul>
-        
-
-        <h3>
-          Ordered Lists
-        </h3>
-        
-
-        <ol>
-          
-
-          <li>
-            a
-          </li>
-          
-
-          <li>
-            b
-          </li>
-          
-
-        </ol>
-        
-
-        <h2>
-          Links
-        </h2>
-        
-
-        <p>
-          You can create links with descriptive text:
-        </p>
-        
-
-        <p>
-          <a
-            href="https://github.com/efefurkankarakaya/markdown-preview"
-          >
-            Markdown Preview
-          </a>
-           is a free and open source web tool.
-        </p>
-        
-
-        <h2>
-          Images
-        </h2>
-        
-
-        <p>
-          You can include images similarly to links, with an exclamation mark (!) in front:
-        </p>
-        
-
-        <p>
-          <img
-            alt="Alt text"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Markdown.png/320px-Markdown.png"
-          />
-        </p>
-        
-
-        <h2>
-          Blockquotes
-        </h2>
-        
-
-        <p>
-          To create blockquotes, use the &gt; symbol:
-        </p>
-        
-
-        <blockquote>
+        </textarea>
+        <div
+          class="outputArea padding margin border"
+          id="outputField"
+        >
+          <h1>
+            Markdown: A Simple Markup Language
+          </h1>
           
 
           <p>
-            This is a blockquote.
+            Markdown is a lightweight markup language that allows you to format plain text documents using a simple and easy-to-read syntax. It was created by John Gruber and Aaron Swartz in 2004 with the goal of making it simple to write structured documents that can be easily converted to HTML.
           </p>
           
 
-        </blockquote>
-        
+          <h2>
+            Headers
+          </h2>
+          
 
-        <h2>
-          Code
-        </h2>
-        
+          <p>
+            You can create headers by using hashtags (
+            <code>
+              #
+            </code>
+            ). The number of hashtags indicates the header level:
+          </p>
+          
 
-        <p>
-          To format inline code, wrap it with backticks (\`\`):
-        </p>
-        
+          <h2>
+            Emphasis
+          </h2>
+          
 
-        <p>
-          Use 
-          <code>
-            print("Hello, world!")
-          </code>
-           to display text.
-        </p>
-        
+          <p>
+            You can emphasize text by using asterisks (
+            <code>
+              *
+            </code>
+            ) or underscores (
+            <code>
+              _
+            </code>
+            ):
+          </p>
+          
 
-        <p>
-          For code blocks, use triple backticks:
-        </p>
-        
+          <ul>
+            
 
-        <pre>
-          <code>
-            def example_function():
+            <li>
+              <em>
+                Italic text
+              </em>
+               can be created using 
+              <code>
+                *
+              </code>
+               or 
+              <code>
+                _
+              </code>
+              .
+            </li>
+            
+
+            <li>
+              <strong>
+                Bold text
+              </strong>
+               can be created using 
+              <code>
+                **
+              </code>
+               or 
+              <code>
+                __
+              </code>
+              .
+            </li>
+            
+
+          </ul>
+          
+
+          <h2>
+            Lists
+          </h2>
+          
+
+          <p>
+            Markdown supports both ordered and unordered lists:
+          </p>
+          
+
+          <h3>
+            Unordered Lists
+          </h3>
+          
+
+          <ul>
+            
+
+            <li>
+              Item 1
+            </li>
+            
+
+            <li>
+              Item 2
+            </li>
+            
+
+            <li>
+              Item 3
+            </li>
+            
+
+          </ul>
+          
+
+          <h3>
+            Ordered Lists
+          </h3>
+          
+
+          <ol>
+            
+
+            <li>
+              a
+            </li>
+            
+
+            <li>
+              b
+            </li>
+            
+
+          </ol>
+          
+
+          <h2>
+            Links
+          </h2>
+          
+
+          <p>
+            You can create links with descriptive text:
+          </p>
+          
+
+          <p>
+            <a
+              href="https://github.com/efefurkankarakaya/markdown-preview"
+            >
+              Markdown Preview
+            </a>
+             is a free and open source web tool.
+          </p>
+          
+
+          <h2>
+            Images
+          </h2>
+          
+
+          <p>
+            You can include images similarly to links, with an exclamation mark (!) in front:
+          </p>
+          
+
+          <p>
+            <img
+              alt="Alt text"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Markdown.png/320px-Markdown.png"
+            />
+          </p>
+          
+
+          <h2>
+            Blockquotes
+          </h2>
+          
+
+          <p>
+            To create blockquotes, use the &gt; symbol:
+          </p>
+          
+
+          <blockquote>
+            
+
+            <p>
+              This is a blockquote.
+            </p>
+            
+
+          </blockquote>
+          
+
+          <h2>
+            Code
+          </h2>
+          
+
+          <p>
+            To format inline code, wrap it with backticks (\`\`):
+          </p>
+          
+
+          <p>
+            Use 
+            <code>
+              print("Hello, world!")
+            </code>
+             to display text.
+          </p>
+          
+
+          <p>
+            For code blocks, use triple backticks:
+          </p>
+          
+
+          <pre>
+            <code>
+              def example_function():
     print("This is a code block")
 
-          </code>
-        </pre>
-        
+            </code>
+          </pre>
+          
 
-        <h2>
-          Horizontal Rules
-        </h2>
-        
+          <h2>
+            Horizontal Rules
+          </h2>
+          
 
-        <p>
-          You can create horizontal rules with three or more hyphens, asterisks, or underscores:
-        </p>
-        
+          <p>
+            You can create horizontal rules with three or more hyphens, asterisks, or underscores:
+          </p>
+          
 
-        <hr />
-        
+          <hr />
+          
 
+        </div>
       </div>
     </div>
   </div>

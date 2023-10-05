@@ -2,6 +2,10 @@ import remarkHtml, { type Options } from "remark-html";
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 
+export function matchText(text: string, regex: RegExp): boolean {
+  return new RegExp(regex, "g").test(text);
+}
+
 export async function convertMarkdownToHTML(content: string): Promise<string> {
   const remarkHtmlConfig: Options = {
     sanitize: false

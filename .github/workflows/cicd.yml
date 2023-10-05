@@ -1,4 +1,4 @@
-name: CI & CD
+name: CI/CD
 
 on:
   # Runs on pushes targeting the default branch

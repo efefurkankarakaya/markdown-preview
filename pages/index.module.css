@@ -6,8 +6,18 @@
 
 .innerContainer {
   display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.editorContainer {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.formatIcons {
+  justify-content: center;
 }
 
 .padding {
@@ -36,7 +46,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .innerContainer {
+  .editorContainer {
     flex-direction: column;
   }
 
