@@ -7,13 +7,14 @@ import TransparentButton from "@/components/TransparentButton";
 
 /* Style */
 import Style from "./index.module.css";
-import { BoldIcon, H1Icon, ItalicIcon } from "@/public/icons";
+import { BoldIcon, H1Icon, H2Icon, ItalicIcon } from "@/public/icons";
 
 /* Others */
 import { combineClasses, convertMarkdownToHTML } from "@/utils/utils";
 import { welcome } from "@/constants/welcome";
 import { TFormatButton } from "@/common/types";
 import { applyFormat } from "@/helpers/formatHelpers";
+import IconButton from "@/components/IconButton";
 
 export default function Home() {
   const [markdownValue, setMarkdownValue] = useState<string>(welcome);
@@ -53,24 +54,46 @@ export default function Home() {
         <div className={Style.formatIcons}>
           {/* TODO: These are repetitive components, you can create custom ones for these icons. */}
           {/* TODO: Add cursor on mouse */}
-          <TransparentButton onClick={() => handleClickOnFormatIcon("bold")}>
-            <Image priority src={BoldIcon} alt="bold" />
-          </TransparentButton>
-          <TransparentButton onClick={() => handleClickOnFormatIcon("italic")}>
-            <Image priority src={ItalicIcon} alt="italic" />
-          </TransparentButton>
-          <TransparentButton onClick={() => handleClickOnFormatIcon("h1")}>
-            <Image priority src={H1Icon} alt="h1" />
-          </TransparentButton>
+          <IconButton
+            buttonProps={{
+              onClick: () => handleClickOnFormatIcon("bold")
+            }}
+            imageProps={{
+              src: BoldIcon,
+              alt: "bold"
+            }}
+          />
+          <IconButton
+            buttonProps={{
+              onClick: () => handleClickOnFormatIcon("italic")
+            }}
+            imageProps={{
+              src: ItalicIcon,
+              alt: "italic"
+            }}
+          />
+          <IconButton
+            buttonProps={{
+              onClick: () => handleClickOnFormatIcon("h1")
+            }}
+            imageProps={{
+              src: H1Icon,
+              alt: "h1"
+            }}
+          />
+          <IconButton
+            buttonProps={{
+              onClick: () => handleClickOnFormatIcon("h2")
+            }}
+            imageProps={{
+              src: H2Icon,
+              alt: "h2"
+            }}
+          />
         </div>
         <div className={Style.editorContainer}>
           <FixedTextArea
-            extraClassName={combineClasses(
-              Style.textArea,
-              Style.padding,
-              Style.margin,
-              Style.border
-            )}
+            extraClassName={combineClasses(Style.textArea, Style.padding, Style.margin, Style.border)}
             textAreaProps={{
               // @ts-ignore
               ref: fixedTextAreaRef,
@@ -80,12 +103,7 @@ export default function Home() {
             }}
           />
           <div
-            className={combineClasses(
-              Style.outputArea,
-              Style.padding,
-              Style.margin,
-              Style.border
-            )}
+            className={combineClasses(Style.outputArea, Style.padding, Style.margin, Style.border)}
             dangerouslySetInnerHTML={{ __html: htmlValue }}
             id="outputField"
           />
