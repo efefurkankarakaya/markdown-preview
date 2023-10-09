@@ -6,7 +6,8 @@ A live Markdown Preview app built on Next.js
 - [Next.js](https://nextjs.org/)
 - [Remark](https://github.com/remarkjs/remark) - to process `Markdown` files
 - [Rehype](https://github.com/rehypejs/rehype) - to process `HTML` files
-- [Jest](https://jestjs.io/) - for `Snapshot Testing` and `Unit Testing`
+- [Jest](https://jestjs.io/) - for `Unit Testing`
+- [React Testing Library](https://testing-library.com/) - for `Component Testing`
 - [Github Actions](https://docs.github.com/en/actions) - to manage `CI/CD`
 - [Husky](https://typicode.github.io/husky/getting-started.html) - to manage `Git Hooks`
 
