@@ -86,10 +86,7 @@ export default function Home() {
   const handleClickOnFormatIcon = (formatType: TFormatButton) => {
     console.log("[handeClickOnFormatIcon]");
     const selectionData: TSelectionData = getSelectionData();
-    // This is more safe way to track active text instead of extracting it by range since it's updated by changes.
-    // And, it should not be called in trackUserTextSelection() function since it's dependent to markdownValue.
-    // Because, in every change cursor and selection goes to the end.
-    const selectedText: string = window.getSelection()?.toString() || "";
+    const selectedText = markdownValue.substring(selectionData[0], selectionData[1]);
     const updatedText: string = applyFormat(markdownValue, formatType, selectionData);
     setSelectionState(selectionData); /* To keep the old selection state before formatting */
     setActiveText(selectedText);
