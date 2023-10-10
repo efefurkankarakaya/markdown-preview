@@ -1,9 +1,8 @@
 /* Core */
 import { useState, type FormEventHandler, useEffect, useRef } from "react";
-import Image from "next/image";
+
 /* Custom Components */
 import { FixedTextArea } from "@/components";
-import TransparentButton from "@/components/TransparentButton";
 
 /* Style */
 import Style from "./index.module.css";
@@ -19,10 +18,18 @@ import IconButton from "@/components/IconButton";
 export default function Home() {
   const [markdownValue, setMarkdownValue] = useState<string>(welcome);
   const [htmlValue, setHTMLValue] = useState<string>("");
+  const [selectionState, setSelectionState] = useState<Array<number>>([0, 0]); /* [selectionStart, selectionEnd] */
   const fixedTextAreaRef = useRef();
 
   useEffect(() => {
     convertMarkdownToHTML(markdownValue).then((data) => setHTMLValue(data));
+    /* Formatted text starts from the beginning of the pure text */
+    /* @ts-ignore: ref */
+    fixedTextAreaRef.current.selectionStart = selectionState[0];
+    /* For bold, formatted text starts with 2 asterisks and ends with 2 asterisks */
+    /* TODO: This should be refactored with a generic approach. */
+    /* @ts-ignore: ref */
+    fixedTextAreaRef.current.selectionEnd = 2 + selectionState[1] + 2;
   }, [markdownValue]);
 
   const onChangeMarkdownValue: FormEventHandler<HTMLTextAreaElement> = (
@@ -32,12 +39,10 @@ export default function Home() {
   };
 
   const getSelectionData = (): Array<number> => {
-    // @ts-ignore: Ref
+    // @ts-ignore: ref
     const selectionStart: number = fixedTextAreaRef.current.selectionStart;
-    // @ts-ignore: Ref
+    // @ts-ignore: ref
     const selectionEnd: number = fixedTextAreaRef.current.selectionEnd;
-
-    console.log(markdownValue.substring(selectionStart, selectionEnd));
 
     return [selectionStart, selectionEnd];
   };
@@ -45,6 +50,7 @@ export default function Home() {
   const handleClickOnFormatIcon = (formatType: TFormatButton) => {
     const selectionData = getSelectionData();
     const updatedText = applyFormat(markdownValue, formatType, selectionData);
+    setSelectionState(selectionData);
     setMarkdownValue(updatedText);
   };
 
@@ -52,11 +58,11 @@ export default function Home() {
     <div className={Style.container}>
       <div className={Style.innerContainer}>
         <div className={Style.formatIcons}>
-          {/* TODO: These are repetitive components, you can create custom ones for these icons. */}
           {/* TODO: Add cursor on mouse */}
           <IconButton
             buttonProps={{
-              onClick: () => handleClickOnFormatIcon("bold")
+              onClick: () => handleClickOnFormatIcon("bold"),
+              onMouseDown: (e) => e.preventDefault() // To prevent loss of focus to text editor
             }}
             imageProps={{
               src: BoldIcon,
@@ -95,7 +101,7 @@ export default function Home() {
           <FixedTextArea
             extraClassName={combineClasses(Style.textArea, Style.padding, Style.margin, Style.border)}
             textAreaProps={{
-              // @ts-ignore
+              // @ts-ignore: ref
               ref: fixedTextAreaRef,
               onChange: onChangeMarkdownValue,
               value: markdownValue
