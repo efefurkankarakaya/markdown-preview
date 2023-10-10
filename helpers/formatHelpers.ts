@@ -1,4 +1,5 @@
 import { TFormatButton } from "@/common/types";
+import { MarkdownPatterns } from "@/constants/regexes";
 import { matchText } from "@/utils/utils";
 
 export function applyFormat(markdownValue: string, formatType: TFormatButton, selectionData: Array<number>): string {
@@ -19,7 +20,7 @@ export function applyFormat(markdownValue: string, formatType: TFormatButton, se
 
 export function formatText(text: string, formatType: TFormatButton): string {
   let processedText: string = "";
-  console.log(text);
+  console.log("[formatText] Text, Format Type: " + text, formatType);
 
   // TODO: If user wants to select and remove the current format, then user won't select the whole text and prefixes & postfixes will still be there.
 
@@ -39,17 +40,15 @@ export function formatText(text: string, formatType: TFormatButton): string {
    */
   switch (formatType) {
     case "bold":
-      const boldTextPattern = /\*\*(.*?)\*\*/;
-      if (matchText(text, boldTextPattern)) {
+      if (matchText(text, MarkdownPatterns.bold)) {
         processedText = text.replaceAll("**", "");
       } else {
         processedText = "**" + text + "**";
       }
-      console.log("Bold");
     case "italic":
-      console.log("Italic");
+      break;
     case "link":
-      console.log("Link");
+      break;
     // case "header":
     //   // TODO: Open a dropdown list that shows header types
     //   console.log("Header (?)");
