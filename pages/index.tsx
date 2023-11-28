@@ -86,6 +86,8 @@ export default function Home() {
   const handleClickOnFormatIcon = (formatType: TFormatButton) => {
     console.log("[handeClickOnFormatIcon]");
     const selectionData: TSelectionData = getSelectionData();
+    // And, it should not be called in trackUserTextSelection() function since it's dependent to markdownValue.
+    // Because, in every change cursor and selection goes to the end.
     const selectedText = markdownValue.substring(selectionData[0], selectionData[1]);
     const updatedText: string = applyFormat(markdownValue, formatType, selectionData);
     setSelectionState(selectionData); /* To keep the old selection state before formatting */
@@ -113,7 +115,7 @@ export default function Home() {
               alt: "bold"
             }}
           />
-          <IconButton
+          {/* <IconButton
             buttonProps={{
               onClick: () => handleClickOnFormatIcon("italic")
             }}
@@ -139,7 +141,7 @@ export default function Home() {
               src: H2Icon,
               alt: "h2"
             }}
-          />
+          /> */}
         </div>
         <div className={Style.editorContainer}>
           <FixedTextArea
